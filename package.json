@@ -1,0 +1,24 @@
+{
+  "name": "url_shortener",
+  "version": "1.0.0",
+  "description": "A backend API for shortening web URLs.",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgdev1024/URL_Shortener.git"
+  },
+  "keywords": [
+    "url",
+    "shortener",
+    "freecodecamp"
+  ],
+  "author": "Dennis Griffin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dgdev1024/URL_Shortener/issues"
+  },
+  "homepage": "https://github.com/dgdev1024/URL_Shortener#readme"
+}

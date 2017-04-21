@@ -1,0 +1,54 @@
+@import "https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Serif+Pro";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #552900;
+    font-family: "Source Serif Pro", serif;
+}
+
+.dwg-body {
+    width: 80%;
+    margin: 0px auto;
+    padding: 32px;
+    background-color: #FFD3AA;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 16px;
+}
+
+h2 {
+    text-align: center;
+    padding: 16px 0px;
+}
+
+h6 {
+    text-align: center;
+    padding-top: 16px;
+}
+
+p {
+    text-align: center;
+    font-style: italic;
+}
+
+ul {
+    list-style: none;
+    padding-top: 8px;
+}
+
+li {
+    text-align: center;
+    padding: 4px 0px;
+}
+
+code {
+    font-family: "Source Code Pro", monospace;
+    background-color: #DDDDDD;
+    color: #DD0000;
+}

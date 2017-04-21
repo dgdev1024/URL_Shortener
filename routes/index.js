@@ -24,7 +24,7 @@ Router.get("/shorten/*", (req, res) => {
     URLController.create(param, (err, data) => {
         if (err) {
             // Let the user know what went wrong.
-            req.json({ error: err });
+            res.json({ error: err });
         } else {
             // If the item is successfully added, show the URL and its
             // new ID in a JSON response.

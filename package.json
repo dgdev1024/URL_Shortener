@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/dgdev1024/URL_Shortener/issues"
   },
-  "homepage": "https://github.com/dgdev1024/URL_Shortener#readme"
+  "homepage": "https://github.com/dgdev1024/URL_Shortener#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.5"
+  }
 }

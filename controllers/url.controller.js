@@ -93,16 +93,39 @@ module.exports = {
         if (isURL(url) === false) {
             callback(`${url} is not a valid URL.`);
         } else {
-            URLModel.create({
-                originalURL: url,
-                shortenedID: encode(++URLCount)
-            }, (err, document) => {
+            //
+            // Query the database. Check to see if the URL given has not already
+            // been shortened.
+            //
+            URLModel.findOne({ originalURL: url }, (err, document) => {
+                // If an error occurs, let the user know what went wrong.
                 if (err) {
                     callback(err);
                 }
 
-                callback(null, document);
+                // Check to see if the document has been found.
+                if (document) {
+                    // If it has, send that URL and the shortened ID to the
+                    // callback.
+                    callback(null, document);
+                } else {
+                    // Otherwise, shorten the URL and add it to the database.
+                    URLModel.create({
+                        originalURL: url,
+                        shortenedID: encode(++URLCount)
+                    }, (err, document) => {
+                        // Again, check for errors.
+                        if (err) {
+                            callback(err);
+                        }
+
+                        // Send the newly shortened link to the callback.
+                        callback(null, document);
+                    });
+                }
             });
+
+                    
         }
     },
 
